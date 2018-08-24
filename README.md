@@ -23,7 +23,7 @@ https://docs.docker.com/ee/end-to-end-install/
 
 ## Container run instructions
 
-A previously built container can be downloaded from Docker Hub, here:
+A previously built container can be downloaded from Docker Hub, by executing this command:
 
 docker pull lammerse/flask-helloworld
 
