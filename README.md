@@ -5,11 +5,13 @@ This is a simple Python-based web application based on the Flask microframework,
 
 Design decisions
 
-The intially provided uncontainerized code was configured to listen on the loopback interace, which is not accessible in a containerized environment, which is why a parameter of 'host=0.0.0.0' was added to the app.run command. This binds the server to all interfaces, including the one which connects the container to the host platform so that the service may be accessed.
+1.The intially provided uncontainerized code was configured to listen on the loopback interace, which is not accessible in a containerized environment, which is why a parameter of 'host=0.0.0.0' was added to the app.run command. This binds the server to all interfaces, including the one which connects the container to the host platform so that the service may be accessed.
 
 The diagram below illustrates the basics of Docker network connectivity:
 
 ![Alt text](docker-networking.png?raw=true "Docker networking")
+
+2. Since 5000 is a non-standard HTTP port, the exposed port is set to the default of 80 when running the container for ease of use.
 
 Prerequisites
 
